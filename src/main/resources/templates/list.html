@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+    <a href="/add">Add a message</a><br />
+    <div th:each="message: ${messages}">
+        <h3 th:text="${message.content}"></h3>
+        <h4 th:text="${message.sentby}"></h4>
+        <h5 th:text="${message.postddate}"></h5> <br />
+    </div>
+</body>
+</html>
